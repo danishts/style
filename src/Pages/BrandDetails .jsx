@@ -341,16 +341,20 @@ const BrandDetails = () => {
         <img
           src={Action}
           alt="icon"
-          className="w-8 h-8 transition-transform transform hover:scale-125"
+          className="w-[32px] h-[32px] transition-transform transform hover:scale-125"
         />
-        <h1 className="text-3xl font-semibold">Brand Details</h1>
+        <h1 className="text-[32px] font-inter text-[#181C32]">Brand Details</h1>
       </div>
 
       <div className="border-2 border-[#e3e3e3] rounded-lg w-full min-h-screen">
         <div className="bg-white p-6">
           {/* Logo */}
           <div className="flex flex-col mb-4">
-            <img src={Logo1} alt="Logo" className="w-32 h-32 object-contain" />
+            <img
+              src={Logo1}
+              alt="Logo"
+              className="w-[100.12px] h-[39.974082946777344] object-contain"
+            />
           </div>
 
           {/* Brand Name and Image */}
@@ -375,7 +379,7 @@ const BrandDetails = () => {
             <h1
               className={`mr-4 cursor-pointer pb-2 ${
                 activeSection === "product"
-                  ? "font-semibold text-blue-500 border-b-2 border-blue-500"
+                  ? "font-semibold text-[#3BCCDA]  border-[#3BCCDA] border-b-2"
                   : ""
               }`}
               onClick={toggleProductList}
@@ -385,7 +389,7 @@ const BrandDetails = () => {
             <h1
               className={`cursor-pointer pb-2 ${
                 activeSection === "order"
-                  ? "font-semibold text-blue-500 border-b-2 border-blue-500"
+                  ? "font-semibold text-[#3BCCDA]  border-[#3BCCDA] border-b-2 "
                   : ""
               }`}
               onClick={toggleOrder}

@@ -1059,7 +1059,7 @@ const Dashboard = () => {
         label: "",
         data: [, 200, 150, 300, 250, 400, 350],
         borderColor: "#3BCCDA",
-        backgroundColor: "rgba(59, 204, 218, 0.2)",
+        backgroundColor: "rgba(59, 204, 218, 204, 218, 0.2)",
         fill: true,
         tension: 0.4,
       },
@@ -1087,7 +1087,7 @@ const Dashboard = () => {
     <div className="px-4 sm:px-8 md:px-20 lg:px-40 py-6">
       {/* Chart + Info Boxes */}
       <div className="flex flex-col lg:flex-row gap-6">
-        <div className="bg-white p-4 border-2 border-[#e3e3e3] rounded-2xl w-full lg:w-3/5">
+        <div className="bg-white p-4 border-2 border-[#E3E3E3] rounded-2xl w-full lg:w-3/5">
           <div className="flex justify-between items-center mb-4 flex-wrap gap-3">
             <div>
               <h2 className="text-lg font-semibold text-gray-800">
@@ -1136,7 +1136,7 @@ const Dashboard = () => {
               className="p-4 border-2 border-[#e3e3e3] rounded-2xl w-full sm:w-[246px] h-[201px] flex flex-col"
             >
               <p className="text-2xl font-bold">{item.value}</p>
-              <h3 className="text-lg font-semibold text-gray-700">
+              <h3 className="text-lg font-semibold text-[#A1A5B7]">
                 {item.label}
               </h3>
             </div>
@@ -1157,28 +1157,30 @@ const Dashboard = () => {
               placeholder="Search any customer/brand"
               value={searchCustomerBrand}
               onChange={(e) => setSearchCustomerBrand(e.target.value)}
-              className="w-full sm:w-[238px] h-[38px] bg-[#F9F9F9] rounded-md px-3 text-xs font-semibold text-[#7E8299] focus:outline-none"
+              className="w-full sm:w-[238px] h-[38px] text-[12px] font-inter bg-[#F9F9F9] rounded-md px-3 text-xs font-semibold text-[#7E8299] focus:outline-none"
             />
             <input
               type="text"
               placeholder="Search Order ID"
               value={searchOrderID}
               onChange={(e) => setSearchOrderID(e.target.value)}
-              className="w-full sm:w-[238px] h-[38px] bg-[#F9F9F9] rounded-md px-3 text-xs font-semibold text-[#7E8299] focus:outline-none"
+              className="w-full sm:w-[238px] h-[38px] text-[12px] font-inter bg-[#F9F9F9] rounded-md px-3 text-xs font-semibold text-[#7E8299] focus:outline-none"
             />
           </div>
         </div>
 
         <div className="overflow-x-auto">
           <table className="min-w-full w-full bg-white text-sm text-left text-gray-600">
-            <thead className="border-b border-dotted text-gray-600 font-semibold">
+            <thead className="border-b border-dashed font-inter border-[#E1E3EA] text-[#A1A5B7] font-semibold">
               <tr>
-                <th className="px-4 py-3">Order ID</th>
-                <th className="px-4 py-3">Customer</th>
-                <th className="px-4 py-3">Product Detail</th>
-                <th className="px-4 py-3">Brand</th>
-                <th className="px-4 py-3">Amount</th>
-                <th className="px-4 py-3">Status</th>
+                <th className="px-4  text-[16px] font-inter py-3">Order ID</th>
+                <th className="px-4 text-[16px] font-inter py-3">Customer</th>
+                <th className="px-4 text-[16px] font-inter py-3">
+                  Product Detail
+                </th>
+                <th className="px-4 text-[16px] font-inter   py-3">Brand</th>
+                <th className="px-4 text-[16px] font-inter py-3">Amount</th>
+                <th className="px-4 text-[16px] font-inter py-3">Status</th>
               </tr>
             </thead>
             <tbody>
@@ -1186,19 +1188,21 @@ const Dashboard = () => {
                 currentItems.map((order, index) => (
                   <tr
                     key={index}
-                    className="border-b border-dashed hover:bg-gray-50 transition duration-200"
+                    className="border-b border-dashed border-[#E1E3EA] text-[16px] hover:bg-gray-50 transition duration-200"
                   >
-                    <td className="px-12 py-7 font-medium">{order.id}</td>
+                    <td className="px-12 py-7 text-[#7E8299] text-[16px] font-inter">
+                      {order.id}
+                    </td>
 
                     {/* Customer Column */}
                     <td className="px-6 py-3">
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center  gap-3">
                         <img
                           src={v3Img}
                           alt="Customer"
                           className="w-12 h-12 rounded-full object-cover"
                         />
-                        <span className="whitespace-nowrap">
+                        <span className="whitespace-nowrap text-[16px] font-inter font-bold text-[#3F4254]">
                           {order.customer}
                         </span>
                       </div>
@@ -1206,13 +1210,13 @@ const Dashboard = () => {
 
                     {/* Product Column */}
                     <td className="px-4 py-3">
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center  gap-3">
                         <img
                           src={Table}
                           alt="Product"
                           className="w-12 h-12 rounded-md object-cover"
                         />
-                        <span className="whitespace-nowrap">
+                        <span className="whitespace-nowrap text-[16px] font-inter text-[#7E8299]">
                           {order.product}
                         </span>
                       </div>
@@ -1226,12 +1230,16 @@ const Dashboard = () => {
                           alt="Brand"
                           className="w-12 h-12 rounded-full object-cover"
                         />
-                        <span className="whitespace-nowrap">{order.brand}</span>
+                        <span className="whitespace-nowrap  text-[16px] font-inter text-[#7E8299]">
+                          {order.brand}
+                        </span>
                       </div>
                     </td>
 
                     {/* Amount */}
-                    <td className="px-4 py-3">{order.amount}</td>
+                    <td className="px-4 py-3 text-[16px] font-inter text-[#7E8299]">
+                      {order.amount}
+                    </td>
 
                     {/* Status */}
                     <td className="px-4 py-3">

@@ -784,6 +784,7 @@ const ProductList = () => {
                 key={product.id}
                 product={product}
                 onClick={handleProductClick}
+               // Add cursor pointer for clickable cards
               />
             ))}
           </div>

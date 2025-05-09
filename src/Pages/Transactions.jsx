@@ -9,28 +9,28 @@ function Transactions() {
   const transactionData = [
     {
       brand: "ZARA",
-      products: "Skirt, Ribbed Pant, Glasses",
+      products: "Skirt",
       date: "12/01/2023",
       amount: 499.0,
       commission: 49.9,
     },
     {
       brand: "ZARA",
-      products: "Skirt, Ribbed Pant, Glasses",
+      products: "Skirt",
       date: "12/01/2023",
       amount: 499.99,
       commission: 50.0,
     },
     {
       brand: "ZARA",
-      products: "Skirt, Ribbed Pant, Glasses",
+      products: "Skirt",
       date: "12/01/2023",
       amount: 399.99,
       commission: 39.99,
     },
     {
       brand: "ZARA",
-      products: "Dress, Coat",
+      products: "Dress",
       date: "14/01/2023",
       amount: 599.0,
       commission: 59.9,
@@ -57,24 +57,34 @@ function Transactions() {
       {/* Revenue Summary Boxes */}
       <div className="flex flex-col md:flex-row gap-4 mb-6">
         <div className="w-full md:w-1/2 h-48 flex flex-col p-8 border-2 border-[#e3e3e3] text-xl font-bold rounded-lg">
-          <span className="text-3xl text-[#74D5B3]">€2,786.22</span>
-          <span className="text-sm text-[#A1A5B7] mt-2">Revenue Generated</span>
+          <span className="text-[34px] font-inter text-[#74D5B3]">
+            €2,786.22
+          </span>
+          <span className="text-[14px] font-inter text-[#A1A5B7] mt-2">
+            Revenue Generated
+          </span>
         </div>
         <div className="w-full md:w-1/2 h-48 flex flex-col p-8 border-2 border-[#e3e3e3] text-xl font-bold rounded-lg">
-          <span className="text-3xl">€2,786.22</span>
-          <span className="text-sm text-[#A1A5B7] mt-2">Revenue Generated</span>
+          <span className="text-[34px] font-inter text-[#3F4254]">
+            €2,786.22
+          </span>
+          <span className="text-[14px] font-inter text-[#A1A5B7] mt-2">
+            Revenue Generated
+          </span>
         </div>
       </div>
 
       {/* Filters */}
       <div className="overflow-x-auto border-2 p-6 border-[#e3e3e3] rounded-lg">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-4">
-          <h1 className="font-bold text-lg">Transactions</h1>
+          <h1 className="text-[20px] font-inter text-[#3F4254] ">
+            Transactions
+          </h1>
 
           <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
             {/* Time Filter */}
             <div className="relative w-[174px] h-[38px]">
-              <select className="appearance-none border border-gray-300 text-sm px-3 py-2 rounded-md w-full h-full pr-8">
+              <select className="appearance-none border border-gray-300  bg-[#F9F9F9] text-[12px]  font-semibold font-inter text-[#7E8299] text-sm px-3 py-2 rounded-md w-full h-full pr-8">
                 <option>This Month</option>
                 <option>Last Month</option>
                 <option>Last 3 Months</option>
@@ -98,7 +108,7 @@ function Transactions() {
 
             {/* Sort Order */}
             <div className="relative w-[174px] h-[38px]">
-              <select className="appearance-none border border-gray-300 text-sm px-3 py-2 rounded-md w-full h-full pr-8">
+              <select className="appearance-none border text-[12px] font-inter text-[#7E8299] font-semibold border-gray-300 bg-[#F9F9F9] text-sm px-3 py-2 rounded-md w-full h-full pr-8">
                 <option>Highest to Lowest</option>
                 <option>Lowest to Highest</option>
               </select>
@@ -120,7 +130,7 @@ function Transactions() {
             </div>
 
             {/* Search Bar */}
-            <div className="flex items-center w-[238px] h-[38px] bg-white border-2 border-gray-300 rounded-md px-3">
+            <div className="flex items-center w-[238px] h-[38px] text-[12px]  font-semibold font-inter text-[#7E8299] bg-[#F9F9F9] border-2 border-gray-300 rounded-md px-3">
               <svg
                 className="w-5 h-5 text-gray-400 mr-2"
                 fill="none"
@@ -137,7 +147,7 @@ function Transactions() {
               <input
                 type="text"
                 placeholder="Search by Restaurant"
-                className="w-full text-sm outline-none text-gray-600"
+                className="w-full text-sm outline-none  text-gray-600"
               />
             </div>
           </div>
@@ -145,17 +155,27 @@ function Transactions() {
 
         {/* Transactions Table */}
         <div className="w-full overflow-x-auto">
-          <table className="w-full min-w-[700px] md:min-w-full text-left border-collapse">
+          <table className="w-full min-w-[700px] md:min-w-full text-left ">
             <thead>
               <tr
                 className="text-sm text-gray-700"
                 style={{ borderBottom: "2px dashed #d1d5db" }}
               >
-                <th className="py-3 px-4">Brand Name</th>
-                <th className="py-3 px-4">Product Detail</th>
-                <th className="py-3 px-4">Order Date</th>
-                <th className="py-3 px-4">Product Amount</th>
-                <th className="py-3 px-4">Commission 10%</th>
+                <th className="py-3 text-[16px] font-inter text-[#A1A5B7] px-4">
+                  Brand Name
+                </th>
+                <th className="py-3 text-[16px] font-inter text-[#A1A5B7] px-4">
+                  Product Detail
+                </th>
+                <th className="py-3 text-[16px] font-inter text-[#A1A5B7] px-4">
+                  Order Date
+                </th>
+                <th className="py-3 text-[16px] font-inter text-[#A1A5B7] px-4">
+                  Product Amount
+                </th>
+                <th className="py-3 text-[16px] font-inter text-[#A1A5B7] px-4">
+                  Commission 10%
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -169,31 +189,39 @@ function Transactions() {
                     <img
                       src={BrandLogo}
                       alt="Brand"
-                      className="w-10 h-10 rounded-full object-cover"
+                      className="w-10 h-10  rounded-full object-cover"
                     />
-                    {row.brand}
+                    <sapn
+                      sapn
+                      className="ml-3 text-sm text-[16px]  font-semibold font-inter text-[#7E8299]"
+                    >
+                      {row.brand}
+                    </sapn>
+                  </td>
+
+                  <td className=" flexpy-3   px-4">
+                    <div className="flex items-center ">
+                      <img
+                        src={BrandLogo}
+                        alt="Product"
+                        className="w-10 h-10 rounded-md object-cover"
+                      />
+                      <span className="ml-3 text-sm text-[16px]  font-semibold font-inter text-[#7E8299]">
+                        {row.products}
+                      </span>
+                    </div>
+                  </td>
+
+                  <td className="py-3 px-4 ml-3 text-sm text-[16px]  font-semibold font-inter text-[#7E8299]">
+                    {row.date}
                   </td>
                   <td className="py-3 px-4">
-                    <img
-                      src={BrandLogo}
-                      alt="Product"
-                      className="w-10 h-10 rounded-md object-cover"
-                    />
-                    <span className="ml-3 text-sm font-semibold">
-                      {row.products}
-                    </span>
-                  </td>
-                  <td className="py-3 px-4">{row.date}</td>
-                  <td className="py-3 px-4">
-                    <div className="text-xl font-bold">
+                    <div className="text-xl  py-3 px-4 text-[16px]  font-semibold font-inter text-[#7E8299]">
                       ${row.amount.toFixed(2)}
                     </div>
-                    <div className="text-sm text-gray-500 mt-1">
-                      Product Amount
-                    </div>
                   </td>
                   <td className="py-3 px-4">
-                    <div className="text-xl font-bold">
+                    <div className="py-3 px-4 text-[16px]  font-semibold font-inter text-[#50CD89]">
                       ${row.commission.toFixed(2)}
                     </div>
                   </td>

@@ -36,7 +36,7 @@ import React, { useState, useEffect } from "react";
 // MobileBar import
 import { Outlet } from "react-router-dom"; // Renders child components like Dashboard, Users, etc.
 import Menubar from "../Menubar";
-import MobileBar from "./mobliebar";
+import MobileBar from "./mobliebar";// Mobile navigation bar component
 
 const MainLayout = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);

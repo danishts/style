@@ -360,6 +360,7 @@ import Login from "./Pages/Auth/Login";
 import BrandPage from "./Pages/BrandPage";
 import CustomerPage from "./Pages/CustomerPage";
 
+
 // Import the new BrandDetails page
 
 import BrandDetails from "./Pages/BrandDetails ";
@@ -370,6 +371,7 @@ import CustomerDetails from "./Pages/CustomerDetails";
 const App = () => {
   return (
     <Router>
+      
       <Routes>
         {/* Login route */}
         <Route path="/" element={<Login />} />

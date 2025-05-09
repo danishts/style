@@ -100,10 +100,10 @@ function Menubar() {
           ))}
         </div>
 
-        <div className="px-2 py-2 overflow-hidden rounded-xl border-2 border-dashed inline-flex items-center gap-[10px]">
+        <div className="px-2 py-2 overflow-hidden rounded-xl border-2 border-dashed border-[#E1E3EA] inline-flex items-center gap-[10px]">
           <div className="w-[50px] h-[50px] relative rounded-md">
             <img
-              className="w-[50px] h-[50px] absolute left-0 top-0 rounded-md"
+              className="w-[47px] h-[43px] absolute left-0 top-0 rounded-md"
               src={login}
               alt="Profile"
             />
@@ -119,7 +119,7 @@ function Menubar() {
           <div className="w-[47px] p-[9px] rounded-md flex justify-center items-center">
             <NavLink to="/login">
               <div className="w-[25px] h-[25px] cursor-pointer">
-                <img src={Vector} alt="login" />
+                <img src={Vector} alt="login" className="text-[#A1A5B7]" />
               </div>
             </NavLink>
           </div>

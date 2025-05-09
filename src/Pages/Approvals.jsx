@@ -159,7 +159,7 @@ const [data, setData] = useState([
           {/* Header */}
           <div className="w-full inline-flex justify-between items-center flex-wrap gap-4 mb-6">
             <div className="flex items-center gap-2">
-              <span className="text-gray-700 text-xl font-semibold font-['Inter']">
+              <span className="text-[20px] font-inter text-[#3F4254]">
                 Approvals
               </span>
               <span className="text-teal-400 text-xl font-semibold font-['Inter']">
@@ -237,73 +237,84 @@ const [data, setData] = useState([
           </div>
 
           {/* Table */}
-         <div className="w-full overflow-x-auto">
-  <table className="min-w-[800px] w-full text-left border-dotted border-spacing-y-2">
-    <thead>
-      <tr className="text-gray-600 text-sm font-semibold border-b border-dashed">
-        <th className="py-2">Brand</th>
-        <th className="py-2">Address</th>
-        <th className="py-2">Description</th>
-        <th className="py-2">Submitted At</th>
-        <th className="py-2">Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      {currentItems.length === 0 ? (
-        <tr>
-          <td colSpan="5" className="text-center py-6 text-gray-400">
-            No results found.
-          </td>
-        </tr>
-      ) : (
-        currentItems.map((row) => (
-          <tr
-            key={row.id}
-            className="border-b border-dotted border-gray-300"
-          >
-            <td className="py-6 flex items-center gap-3">
-              <img
-                src={BrandLogo}
-                alt="Brand"
-                className="w-8 h-8 object-cover rounded-full transition-transform duration-300 ease-in-out hover:scale-125"
-              />
-              {row.brand}
-            </td>
-            <td className="py-6">{row.address}</td>
-            <td className="py-6">{row.description}</td>
-            <td className="py-6">{row.submittedAt}</td>
-            <td className="py-6">
-              <div className="flex gap-4">
-                <button onClick={() => handleApprove(row)} title="Approve">
-                  <img
-                    src={TickIcon}
-                    alt="Approve"
-                    className="w-8 h-8 hover:scale-125 transition-transform duration-300 ease-in-out"
-                  />
-                </button>
-                <button onClick={() => handleReject(row)} title="Reject">
-                  <img
-                    src={CrossIcon}
-                    alt="Reject"
-                    className="w-8 h-8 hover:scale-125 transition-transform duration-300 ease-in-out"
-                  />
-                </button>
-              </div>
-            </td>
-          </tr>
-        ))
-      )}
-    </tbody>
-  </table>
-</div>
-
+          <div className="w-full overflow-x-auto">
+            <table className="min-w-[800px] w-full text-left border-dotted border-spacing-y-2">
+              <thead>
+                <tr className="text-[#A1A5B7] text-[16px] text-sm font-inter border-b-2 border-[#E3E3E3] border-dashed">
+                  <th className="py-6 px-11">Brand</th>
+                  <th className="py-6 px-11">Address</th>
+                  <th className="py-6 px-11">Description</th>
+                  <th className="py-6 px-11">Submitted At</th>
+                  <th className="py-6 px-11">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {currentItems.length === 0 ? (
+                  <tr>
+                    <td colSpan="5" className="text-center py-6 text-gray-400">
+                      No results found.
+                    </td>
+                  </tr>
+                ) : (
+                  currentItems.map((row) => (
+                    <tr
+                      key={row.id}
+                      className="border-dashed border-b-2 border-[#E3E3E3]"
+                    >
+                      <td className="py-6 flex items-center gap-3">
+                        <img
+                          src={BrandLogo}
+                          alt="Brand"
+                          className="w-8 h-8  object-cover rounded-full transition-transform duration-300 ease-in-out hover:scale-125"
+                        />
+                        {row.brand}
+                      </td>
+                      <td className="py-6 px-11 font-inter text-[16px] text-[#7E8299]  ">
+                        {row.address}
+                      </td>
+                      <td className="py-6 px-11 font-inter text-[16px] text-[#7E8299] ">
+                        {row.description}
+                      </td>
+                      <td className="py-6 px-11 font-inter text-[16px] text-[#7E8299] ">
+                        {row.submittedAt}
+                      </td>
+                      <td className="py-6 px-11 font-inter text-[16px] text-[#7E8299] ">
+                        <div className="flex gap-4">
+                          <button
+                            onClick={() => handleApprove(row)}
+                            title="Approve"
+                          >
+                            <img
+                              src={TickIcon}
+                              alt="Approve"
+                              className="w-8 h-8 hover:scale-125 transition-transform duration-300 ease-in-out"
+                            />
+                          </button>
+                          <button
+                            onClick={() => handleReject(row)}
+                            title="Reject"
+                          >
+                            <img
+                              src={CrossIcon}
+                              alt="Reject"
+                              className="w-8 h-8 hover:scale-125  transition-transform duration-300 ease-in-out"
+                            />
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))
+                )}
+              </tbody>
+            </table>
+          </div>
 
           {/* Pagination */}
           <div className="mt-6 flex justify-center gap-2">
             <button
               onClick={() => setCurrentPage(1)}
               disabled={currentPage === 1}
-              className="px-4 py-2 bg-teal-400 text-white rounded-md"
+              className="px-4 py-2 bg-[#74D5B3] text-white rounded-md"
             >
               First
             </button>

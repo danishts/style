@@ -486,7 +486,7 @@ function BrandPage() {
         {/* Header + Filters */}
 
         <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center justify-between gap-4 mb-6">
-          <h2 className="text-2xl font-semibold text-gray-800">All Brands</h2>
+          <h2 className=" text-[20px] font-inter text-[#3F4254]">All Brands</h2>
 
           <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4 w-full sm:w-auto">
             {/* Sorting Dropdown */}
@@ -494,9 +494,9 @@ function BrandPage() {
               <select
                 value={selectedOption}
                 onChange={(e) => setSelectedOption(e.target.value)}
-                className="appearance-none border-2 border-gray-300 rounded-lg py-2 px-4 pr-10 w-full bg-white text-sm text-gray-700"
+                className="appearance-none border-2 border-gray-300 rounded-lg py-2 px-4 pr-10 w-full  bg-white font-inter text-[12px] text-[#7E8299]"
               >
-                <option value="Default">Default</option>
+                <option value="Default ">Default</option>
                 <option value="Revenue High">Revenue High</option>
                 <option value="Orders High">Orders High</option>
               </select>
@@ -504,7 +504,7 @@ function BrandPage() {
             </div>
 
             {/* Search Input */}
-            <div className="flex items-center gap-2 border-2 border-gray-300 rounded-lg px-3 py-2 w-full sm:w-[238px]">
+            <div className="flex items-center gap-2 border-2 border-gray-300 rounded-lg px-3 py-2 font-inter text-[12px] text-[#7E8299]  w-full sm:w-[238px]">
               <FaSearch className="text-gray-500" />
               <input
                 type="text"
@@ -516,12 +516,12 @@ function BrandPage() {
             </div>
 
             {/* Tabs (fixed alignment) */}
-            <div className="flex items-center gap-2 text-sm font-medium h-full">
+            <div className="flex items-center gap-2 text-sm font-inter text-[13px] text-[#7E8299] h-full">
               <button
                 className={`px-4 py-2 rounded ${
                   location.pathname === "/brand"
                     ? "text-black font-bold bg-gray-200"
-                    : "text-gray-600"
+                    : "text-[#A1A5B7]"
                 }`}
               >
                 Brand
@@ -542,9 +542,9 @@ function BrandPage() {
         </div>
 
         {/* Brand Table */}
-        <div className="bg-white  overflow-x-scroll p-6 rounded-xl">
-          <table className="min-w-full text-sm text-left text-gray-600">
-            <thead className="border-b font-semibold">
+        <div className="bg-white   text-[16px] font-inter text-[#7E8299]  p-6 rounded-xl">
+          <table className="min-w-full  text-sm text-left text-gray-600">
+            <thead className="border-dashed border-b border-[#E3E3E3] font-inter text-[16px] text-[#A1A5B7]">
               <tr>
                 <th className="px-4 py-3">Brand Name</th>
                 <th className="px-4 py-3">Revenue Made</th>
@@ -558,7 +558,7 @@ function BrandPage() {
               {currentBrands.map((brand) => (
                 <tr
                   key={brand.id}
-                  className="border-b  hover:bg-gray-50 transition cursor-pointer"
+                  className="border-dashed border-b border-[#E3E3E3]  font-inter text-[16px] text-[#7E8299]  hover:bg-gray-50 transition cursor-pointer"
                   onClick={() => handleBrandClick(brand)} // Handle row click
                 >
                   <td className="px-4 py-4 flex items-center gap-3 font-medium">
@@ -569,24 +569,28 @@ function BrandPage() {
                     />
                     {brand.name}
                   </td>
-                  <td className="px-4 py-3">
+                  <td className="px-4 font-inter text-[16px] text-[#252525]  py-3">
                     ${brand.revenue.toLocaleString()}
                   </td>
-                  <td className="px-4 py-3">
+                  <td className="px-4 font-inter text-[16px] text-[#50CD89]  py-3">
                     ${brand.commission.toLocaleString()}
                   </td>
-                  <td className="px-4 py-3">{brand.totalOrders}</td>
-                  <td className="px-4 py-3">{brand.ordersInQueue}</td>
-                  <td className="px-4 py-3">
+                  <td className="px-4 font-inter text-[16px] text-[#7E8299]  py-3">
+                    {brand.totalOrders}
+                  </td>
+                  <td className="px-4 font-inter text-[16px] text-[#7E8299]  py-3">
+                    {brand.ordersInQueue}
+                  </td>
+                  <td className="px-4 font-inter text-[16px] text-[#7E8299]  py-3">
                     <button
                       onClick={(e) => {
                         e.stopPropagation(); // Prevent row click event from firing
                         openDeleteModal(brand);
                       }}
-                      className="text-red-500  bg-[#f1f1f2] hover:text-red-700"
+                      className="text-[#A1A5B7]   bg-[#F1F1F2] w-[30px] h-[37px] flex justify-center items-center hover:text-red-700"
                       title="Delete"
                     >
-                      <FaTrashAlt className=" bg-[#f1f1f2]" />
+                      <FaTrashAlt className=" bg-[#f1f1f2] w-[12px] h-[16px]" />
                     </button>
                   </td>
                 </tr>

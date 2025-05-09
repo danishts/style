@@ -731,7 +731,7 @@ function CustomerPage() {
       <div className="border-2 border-gray-300 overflow  rounded-lg w-full min-h-screen p-6">
         {/* Filters */}
         <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center justify-between gap-4 mb-6">
-          <h2 className="text-2xl font-semibold text-gray-800">All Users</h2>
+          <h2 className=" text-[20px] font-inter text-[#3F4254]">All Users</h2>
 
           <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4 w-full sm:w-auto">
             {/* Sorting */}
@@ -739,7 +739,7 @@ function CustomerPage() {
               <select
                 value={selectedOption}
                 onChange={(e) => setSelectedOption(e.target.value)}
-                className="appearance-none border-2 border-gray-300 rounded-lg py-2 px-4 pr-10 w-full bg-white text-sm text-gray-700"
+                className="appearance-none border-2 text-[12px] font-inter text-[#3F4254] border-gray-300 rounded-lg py-2 px-4 pr-10 w-full bg-white text-sm"
               >
                 <option value="Both">Both</option>
                 <option value="Best Sellers First">High Spending</option>
@@ -749,7 +749,7 @@ function CustomerPage() {
             </div>
 
             {/* Search */}
-            <div className="flex items-center gap-2 border-2 border-gray-300 rounded-lg px-3 py-2 w-full sm:w-[238px]">
+            <div className="flex items-center gap-2 border-2 text-[1px] font-inter text-[#3F4254] border-gray-300 rounded-lg px-3 py-2 w-full sm:w-[238px]">
               <FaSearch className="text-gray-500" />
               <input
                 type="text"
@@ -790,7 +790,7 @@ function CustomerPage() {
         {/* Users Table */}
         <div className="bg-white overflow-x-scroll p-6 rounded-xl">
           <table className="min-w-full text-sm text-left text-gray-600">
-            <thead className="border-b border-dotted font-semibold">
+            <thead className="border-dashed border-b border-[#E3E3E3] text-[16px] font-inter text-[#A1A5B7]">
               <tr>
                 <th className="px-4 py-3">Customer</th>
                 <th className="px-4 py-3">Email</th>
@@ -806,29 +806,35 @@ function CustomerPage() {
                   onClick={() =>
                     navigate("/customer-details", { state: { customer: user } })
                   }
-                  className="border-b border-dashed hover:bg-gray-50 transition duration-200 cursor-pointer"
+                  className="border-dashed border-b border-[#E3E3E3] hover:bg-gray-50 transition duration-200 cursor-pointer"
                 >
-                  <td className="px-4 py-4 font-medium flex items-center gap-3">
+                  <td className="px-4 py-4 font-medium text-[16px] font-inter text-[#7E8299]  flex items-center gap-3">
                     <img
                       src={user.img}
                       alt={user.name}
-                      className="w-8 h-8 rounded-full object-cover"
+                      className="w-8 h-8 rounded-full  object-cover"
                     />
                     {user.name}
                   </td>
-                  <td className="px-4 py-3">{user.email}</td>
-                  <td className="px-4 py-3">${user.spending}</td>
-                  <td className="px-4 py-3">{user.joinedAt}</td>
-                  <td className="px-4 py-3">
+                  <td className="px-4 text-[16px] font-inter text-[#7E8299] py-3">
+                    {user.email}
+                  </td>
+                  <td className="px-4 text-[16px] font-inter text-[#252525] py-3">
+                    ${user.spending}
+                  </td>
+                  <td className="px-4 text-[16px] font-inter text-[#7E8299] py-3">
+                    {user.joinedAt}
+                  </td>
+                  <td className="px-4 text-[16px] font-inter text-[#7E8299] py-3">
                     <button
                       onClick={(e) => {
                         e.stopPropagation(); // Stop navigation on delete click
                         openDeleteModal(user);
                       }}
-                      className="text-red-500 hover:text-red-700 transition"
+                      className="text-[#A1A5B7] flex items-center justify-center  bg-[#F1F1F2] w-[30px] h-[37px] hover:text-red-700 transition"
                       title="Delete"
                     >
-                      <FaTrashAlt />
+                      <FaTrashAlt className=" bg-[#f1f1f2] w-[12px] h-[16px]" />
                     </button>
                   </td>
                 </tr>
@@ -890,7 +896,7 @@ function CustomerPage() {
               </button>
             </div>
             <div className="text-center mb-4">
-              <div className="flex justify-center">
+              <div className="flex  justify-center">
                 <FaTrashAlt className="text-red-500 text-7xl mb-4" />
               </div>
               <h3 className="text-lg font-semibold mb-2">
