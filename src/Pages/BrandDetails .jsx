@@ -1,7 +1,7 @@
 // import React, { useState } from "react";
 // import { useLocation, useNavigate } from "react-router-dom";
 
-// import Action from "../assets/action.png"; // Action icon for navigation
+// import Action from "../assets/Action.png"; // Action icon for navigation
 // import Logo1 from "../assets/logo1.png"; // Assuming logo1.png is the logo you want to display
 // import ProductList from "./ProductList"; // Import ProductList component
 // import Order from "./Order"; // Import Order component
@@ -150,7 +150,7 @@
 // import React, { useState } from "react";
 // import { useLocation, useNavigate } from "react-router-dom";
 
-// import Action from "../assets/action.png";
+// import Action from "../assets/Action.png";
 // import Logo1 from "../assets/logo1.png";
 // import ProductList from "./ProductList";
 // import Order from "./Order";
@@ -300,7 +300,7 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import Action from "../assets/action.png";
+import Action from "../assets/Action.png";
 import Logo1 from "../assets/logo1.png";
 import ProductList from "./ProductList";
 import Order from "./Order";

@@ -1,6 +1,6 @@
 // import React, { useState } from "react";
 // import { useLocation, useNavigate } from "react-router-dom";
-// import Action from "../assets/action.png";
+// import Action from "../assets/Action.png";
 
 // function CustomerDetails() {
 //   const { state } = useLocation();
